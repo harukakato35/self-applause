@@ -1,0 +1,7 @@
+ <% if user_signed_in? && current_user.id == post.user_id %>
+          <%= link_to 'delete', "/posts/#{post.id}", method: :delete %>
+      <% end %>
+      <%= simple_format(post.text) %>
+
+    
+

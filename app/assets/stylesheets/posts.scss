@@ -1,0 +1,281 @@
+.top-wrapper{
+   height: 800px;
+   background-color: rgba(255, 182, 193, 0.5);
+   background-position: right bottom;
+   background-size: cover;
+   width: 100.8%;
+   position: relative;
+   margin-top: 60px;
+   
+}
+
+header{
+   height: 60px;
+   background-color: rgba(255, 255, 0, 0.5);
+   width: 100%;
+   position: fixed;
+   
+   top: 0;
+  /* z-indexを10に指定してください */
+   z-index: 10;
+
+}
+
+div.contents-row{
+   height: 300px;
+   background-attachment: fixed;
+   overflow: auto;
+   margin-top: 10px;
+     padding: 1em 1.5em;
+     width: 90%; /*幅の調節*/
+     color: #777777; /* 文字色 */
+     background-color: #fff; /* 背景色 */
+     border: 4px solid #f6bfbc; /*線の太さ・色*/
+     border-radius: 3em .8em 3em .7em/.9em 2em .8em 3em;
+     float: right;
+     width: 40%;
+     margin-right: 50px;
+     position: relative;
+}
+
+a.post{
+  display: inline-block;
+  padding: 20px 40px;
+  text-decoration: none;
+  background: #FF00FF;/*ボタン色*/
+  color: #FF00FF;/*ボタン色と同じに*/
+  box-shadow: 0px 2px 2px rgba(0, 0, 0, 0.29);
+  border-bottom: solid 3px #FF00FF;
+  border-radius: 3px;/*角の丸み*/
+  font-weight: bold;
+  text-shadow: -1px -1px rgba(255, 255, 255, 0.44), 1px 1px rgba(0, 0, 0, 0.38); 
+  font-size: 20px;
+  position: absolute;
+  left: 85%;
+  top: 60%;
+}
+
+h2{
+    color: #FFB6C1;
+    font-style: normal;
+    margin-top: 15px;
+    text-rendering: optimizeLegibility;
+    font-family: sans-serif;
+    font-weight: 500;
+    font-size: 100px;
+    margin-bottom: 1px;
+}
+
+
+
+.contents{
+   height: 300px;
+   width: 50%;
+   position: absolute;
+   top: 100px;
+   left: 100px;
+   background-color: rgba(60, 179, 113, 0.5);
+   cursor: pointer;
+   border-radius: 8px;
+}
+
+form#new_user.new_user{
+   padding-left: 30px;
+}
+
+a.title{
+   color: #FF6699;
+   float: left;
+   text-decoration-line: none;
+   
+}
+
+@mixin float{
+   float: right;
+}
+
+.Signout{
+   @include float;
+   padding-right: 50px;
+   padding-bottom: 20px;
+   
+}
+
+.mypage{
+  @include float; 
+  padding-right: 10px;
+  
+}
+
+footer{
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  height: 2.5rem;            /* Footer height */
+}
+
+@mixin post{
+  display: inline-block;
+  padding: 10px 20px;
+  text-decoration: none;
+  background: #FF00FF;/*ボタン色*/
+  color: #FF00FF;/*ボタン色と同じに*/
+  box-shadow: 0px 2px 2px rgba(0, 0, 0, 0.29);
+  border-bottom: solid 3px #FF00FF;
+  border-radius: 4px;/*角の丸み*/
+  font-weight: bold;
+  text-shadow: -1px -1px rgba(255, 255, 255, 0.44), 1px 1px rgba(0, 0, 0, 0.38); 
+  margin-top: 180px;
+  margin-right: 80%;
+  font-size: 24px;
+}
+
+@mixin post-a{
+  -webkit-transform: translateY(4px);
+  transform: translateY(4px);
+  box-shadow: 0px 0px 1px rgba(0, 0, 0, 0.2);
+  border-bottom: none; 
+}
+
+a.post:active{
+    @include post-a;
+}
+
+a.Signin{
+  display: inline-block;
+  padding: 0.5em 1em;
+  text-decoration: none;
+  background: #FF00FF;/*ボタン色*/
+  color: #FF00FF;/*ボタン色と同じに*/
+  box-shadow: 0px 2px 2px rgba(0, 0, 0, 0.29);
+  border-bottom: solid 3px #FF00FF;
+  border-radius: 3px;/*角の丸み*/
+  font-weight: bold;
+  text-shadow: -1px -1px rgba(255, 255, 255, 0.44), 1px 1px rgba(0, 0, 0, 0.38); 
+  float: right;
+  margin-right: 10px;
+}
+
+a.Signin:active{
+  /*ボタンを押したとき*/
+  @include post-a;
+}
+
+a.Signup{
+  display: inline-block;
+  padding: 0.5em 1em;
+  text-decoration: none;
+  background: #FF00FF;/*ボタン色*/
+  color: #FF00FF;/*ボタン色と同じに*/
+  box-shadow: 0px 2px 2px rgba(0, 0, 0, 0.29);
+  border-bottom: solid 3px #FF00FF;
+  border-radius: 3px;/*角の丸み*/
+  font-weight: bold;
+  text-shadow: -1px -1px rgba(255, 255, 255, 0.44), 1px 1px rgba(0, 0, 0, 0.38); 
+  float: right;
+  margin-right: 50px;
+}
+
+a.Signup:active{
+  /*ボタンを押したとき*/
+  @include post-a;
+}
+
+input.submit{
+  display: inline-block;
+  padding: 0.5em 1em;
+  text-decoration: none;
+  background: #FF00FF;/*ボタン色*/
+  color: #FF00FF;/*ボタン色と同じに*/
+  box-shadow: 0px 2px 2px rgba(0, 0, 0, 0.29);
+  border-bottom: solid 3px #FF00FF;
+  border-radius: 3px;/*角の丸み*/
+  font-weight: bold;
+  text-shadow: -1px -1px rgba(255, 255, 255, 0.44), 1px 1px rgba(0, 0, 0, 0.38); 
+  font-size: 30px;
+  margin-left: 60px;
+}
+
+input.submit:active {
+   @include post-a;
+}
+
+a.btn-destroy:active{
+  @include post-a; 
+}
+
+
+
+
+
+p.footer{
+    color: #FFB6C1;
+}
+
+h3{
+    color: #FFB6C1;
+    font-size: 50px;
+    padding-bottom: 180px;
+}
+
+h3.great{
+    font-size: 100px;
+    float: left;
+}
+
+a.back{
+  text-decoration: none;
+  border-bottom: none;
+  margin-top: 30px;
+  margin-left: 900px;
+  font-size: 150px;
+  float: left;
+}
+
+
+
+textarea{
+    margin: 50px 50px;
+    width: 80%;
+    height: 200px;
+    font-size: 24px;
+}
+
+div.contents.row1{
+    background-color: white;
+    padding: 0;
+    margin: 0;
+}
+div.contents.row2{
+  background-color: white;  
+}
+div.contents.row3{
+  background-color: white;  
+}
+
+h3.delete{
+    font-size: 100px;
+    position: relative;
+}
+
+a.btn-destroy{
+  display: inline;
+  text-decoration: none;
+  padding: 10px;
+  background: #FF00FF;/*ボタン色*/
+  color: #FF00FF;/*ボタン色と同じに*/
+  box-shadow: 0px 2px 2px rgba(0, 0, 0, 0.29);
+  border-bottom: solid 3px #FF00FF;
+  border-radius: 4px;/*角の丸み*/
+  font-weight: bold;
+  text-shadow: -1px -1px rgba(255, 255, 255, 0.44), 1px 1px rgba(0, 0, 0, 0.38); 
+  font-size: 30px;
+  position: absolute;
+  top: 450px;
+}
+
+h5{
+    float: right;
+    margin-left: 900px;
+    margin-bottom: 200px;
+}

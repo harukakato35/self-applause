@@ -1,0 +1,14 @@
+<div class="top-wrapper">
+   <h2>What did you achieve today?Anything is ok!</h2>
+ 
+   <div class="contents-row">
+     <% @posts.each do |post| %>
+       <%= render partial: "post", locals: { post: post } %>
+      <% end %>
+   </div>
+      <a class="post" href="/posts/new">Post</a>
+</div>
+
+
+
+          
